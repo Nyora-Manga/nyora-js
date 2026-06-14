@@ -17,7 +17,7 @@ TypeScript. Self-contained: no JVM, no desktop app, no Java. Just `npm install`.
 </p>
 
 <p>
-  <a href="https://www.gnu.org/licenses/gpl-3.0"><img alt="License: GPL v3" src="https://img.shields.io/badge/License-GPLv3-blue.svg?style=for-the-badge" /></a>
+  <a href="https://www.apache.org/licenses/LICENSE-2.0"><img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=for-the-badge" /></a>
   <a href="https://github.com/Hasan72341/nyora-js/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/Hasan72341/nyora-js?style=for-the-badge&logo=github&logoColor=white" /></a>
   <a href="https://github.com/Hasan72341/nyora-js/pulls"><img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-9d95ff?style=for-the-badge&logo=github&logoColor=white" /></a>
 </p>
@@ -243,7 +243,7 @@ bookmarks, and progress sync for free across all of them.
 Nyora is 100% free, ad-free, and contains no tracking. `nyora` is fully auditable
 open-source code: there are no analytics, no telemetry, and no accounts. The only
 network calls it makes are to the sources you ask for and to fetch the
-sha256-verified OTA parser bundle. Licensed under **GPL-3.0-only**.
+sha256-verified OTA parser bundle. Licensed under **Apache-2.0**.
 
 ## Acknowledgements
 
@@ -253,7 +253,7 @@ community. `nyora` is developed and maintained by **Md Hasan Raza** —
 
 ## License
 
-Licensed under **GPL-3.0-only**.
+Licensed under **Apache-2.0**.
 
 ---
 
