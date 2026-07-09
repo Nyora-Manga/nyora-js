@@ -1,0 +1,30 @@
+name: Publish to npm
+
+# Publishes `nyora-sdk` to npm on a version tag (or manual dispatch).
+# Requires a repo secret NPM_TOKEN (an npm *Automation* access token).
+# `--provenance` attaches build provenance (needs id-token: write).
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: release
+    permissions:
+      contents: read
+      id-token: write   # for --provenance
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          registry-url: "https://registry.npmjs.org"
+      - name: Install deps
+        run: npm install --no-audit --no-fund
+      - name: Publish to npm
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
