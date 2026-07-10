@@ -1,0 +1,41 @@
+# Nyora SDK (JavaScript / TypeScript)
+
+> The official JavaScript / TypeScript SDK, CLI and terminal reader for Nyora — build a manga, manhwa or manhua reader with 363 working sources (of ~960 in the cloud catalog) through one typed cloud API. `new Nyora()` talks to the hosted Nyora cloud helper at https://api.hasanraza.tech (the open-source Kotatsu parser engine). No scraper to maintain, no JVM, no jsdom — just `npm i nyora-sdk`. A programmatic Tachiyomi / Mihon / Kotatsu alternative. Includes NyoraSync cloud sync (one account shared across the whole Nyora ecosystem), a `nyora-cli` command, and an interactive terminal reader (TUI). Package: `nyora-sdk` (npm), latest 2.0.3, Apache-2.0.
+
+Docs base: https://nyora.pages.dev/docs/js/
+
+## Documentation
+- [API index](https://nyora.pages.dev/docs/js/index.html): full module / class / function / type index.
+- [Nyora client](https://nyora.pages.dev/docs/js/classes/index.Nyora.html): the default entry point — exposes `client.sources` and `client.manga`. `new Nyora(options?)`; `options.baseUrl` defaults to https://api.hasanraza.tech.
+- [SourcesService](https://nyora.pages.dev/docs/js/classes/index.SourcesService.html): `list()`, `catalog()`, `find(query)` — list and look up the working sources (dead/Cloudflare-walled ones are auto-hidden).
+- [MangaService](https://nyora.pages.dev/docs/js/classes/index.MangaService.html): `popular(sourceId, page?)`, `latest(sourceId, page?)`, `search(sourceId, query, page?)`, `details(sourceId, mangaUrl, { title? })` → MangaDetails (+ chapter list), `pages(sourceId, chapterUrl, { branch? })` → image page URLs.
+- Chapter-ordering helpers — order-independent navigation, correct on ascending (0→N) AND descending (N→0) sources:
+  - [nextChapter](https://nyora.pages.dev/docs/js/functions/index.nextChapter.html)(chapters, current) → MangaChapter | null
+  - [previousChapter](https://nyora.pages.dev/docs/js/functions/index.previousChapter.html)(chapters, current) → MangaChapter | null
+  - [readingOrder](https://nyora.pages.dev/docs/js/functions/index.readingOrder.html)(chapters) → MangaChapter[] (earliest first)
+  - [chapterReadingDelta](https://nyora.pages.dev/docs/js/functions/index.chapterReadingDelta.html)(chapters) → 1 (ascending) | -1 (descending)
+  - [adjacentChapter](https://nyora.pages.dev/docs/js/functions/index.adjacentChapter.html)(chapters, current, reading)
+- [Cloud sync (NyoraSync)](https://nyora.pages.dev/docs/js/classes/index.NyoraSync.html): email + password (OAuth2 password grant + JWT) against https://stream.hasanraza.tech, then last-write-wins `upsert(table, rows)` / `select(table, since)` over per-user tables (nyora_manga, nyora_favourite, …). Methods: `register`, `signIn`, `signOut`, `upsert`, `select`. One account is shared across the iOS app, the TUIs and both SDKs.
+- Types: `Source`, `Manga`, `MangaChapter`, `MangaPage`, `MangaDetails`, `SearchPage` — see the API index.
+
+## Install
+- `npm i nyora-sdk`
+
+## Quickstart — a working reader
+```ts
+import Nyora, { readingOrder } from "nyora-sdk";
+
+const client = new Nyora();
+const source = await client.sources.find("mangadex");            // any of 363 sources
+const hits = await client.manga.search(source.id, "frieren");
+const manga = hits.entries[0];
+const details = await client.manga.details(source.id, manga.url, { title: manga.title });
+const first = readingOrder(details.chapters)[0];                 // earliest chapter, order-safe
+const pages = await client.manga.pages(source.id, first.url, { branch: first.branch });
+pages.forEach((p) => console.log(p.url));                        // image URLs, ready to render
+```
+
+## Related
+- Python twin: https://nyora.pages.dev/docs/python/  (`pip install nyora`)
+- Website & downloads: https://nyora.pages.dev
+- Repository: https://github.com/Hasan72341/nyora-js

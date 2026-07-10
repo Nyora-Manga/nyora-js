@@ -67,7 +67,7 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "dev": "tsx",
     "docs": "typedoc --entryPoints src/index.ts --out docs/api",
-    "docs:site": "typedoc --entryPoints src/index.ts --out ../nyora-site/public/docs/js"
+    "docs:site": "typedoc --entryPoints src/index.ts --out ../nyora-site/public/docs/js && cp docs/llms.txt ../nyora-site/public/docs/js/llms.txt"
   },
   "dependencies": {
     "@inquirer/prompts": "^8.5.2",
