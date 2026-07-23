@@ -5,13 +5,13 @@
   "type": "module",
   "license": "Apache-2.0",
   "author": "Md Hasan Raza",
-  "homepage": "https://nyora.pages.dev/docs/js/",
+  "homepage": "https://nyora.xyz/docs/js/",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Hasan72341/nyora-js.git"
+    "url": "git+https://github.com/Nyora-Manga/nyora-js.git"
   },
   "bugs": {
-    "url": "https://github.com/Hasan72341/nyora-js/issues"
+    "url": "https://github.com/Nyora-Manga/nyora-js/issues"
   },
   "keywords": [
     "manga",

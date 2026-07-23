@@ -17,9 +17,9 @@
     "docs/agents.md"
   ],
   "navigationLinks": {
-    "Docs home": "https://nyora.pages.dev/docs/js/",
-    "Python docs": "https://nyora.pages.dev/docs/python/",
-    "nyora.pages.dev": "https://nyora.pages.dev"
+    "Docs home": "https://nyora.xyz/docs/js/",
+    "Python docs": "https://nyora.xyz/docs/python/",
+    "nyora.xyz": "https://nyora.xyz"
   },
   "navigation": {
     "includeCategories": true,

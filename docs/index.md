@@ -6,7 +6,7 @@ title: Nyora for JavaScript
 
 ### Read like the world can wait.
 
-The official **Node.js** package for [Nyora](https://nyora.pages.dev) — script your library,
+The official **Node.js** package for [Nyora](https://nyora.xyz) — script your library,
 search ~960 manga sources, and fetch chapters and pages straight from
 JavaScript or TypeScript. A thin **cloud client**: no local engine to compile, no
 companion app to launch. Just `npm install`.
@@ -21,7 +21,7 @@ This single install gives you **three** things, documented as clearly separate s
 2. The **`nyora-cli`** command-line tool (and its terminal reader / TUI).
 3. **Cloud sync** (`NyoraSync`) — account + library sync across devices.
 
-> Looking for the Python twin? See **[nyora.pages.dev/docs/python](https://nyora.pages.dev/docs/python/)**.
+> Looking for the Python twin? See **[nyora.xyz/docs/python](https://nyora.xyz/docs/python/)**.
 
 ---
 
@@ -137,9 +137,9 @@ The full typed API is generated from the source by TypeDoc. Start with:
 
 ## Links
 
-- 📖 Full docs: **[nyora.pages.dev/docs/js](https://nyora.pages.dev/docs/js/)**
-- 🐍 Python twin: **[nyora.pages.dev/docs/python](https://nyora.pages.dev/docs/python/)**
-- 🌐 Website: **[nyora.pages.dev](https://nyora.pages.dev)**
+- 📖 Full docs: **[nyora.xyz/docs/js](https://nyora.xyz/docs/js/)**
+- 🐍 Python twin: **[nyora.xyz/docs/python](https://nyora.xyz/docs/python/)**
+- 🌐 Website: **[nyora.xyz](https://nyora.xyz)**
 
 Licensed under **Apache-2.0**. Nyora is not affiliated with any of the manga
 sources it can access.

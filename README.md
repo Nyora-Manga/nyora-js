@@ -1,12 +1,12 @@
 <div align="center">
 
-<img src="https://nyora.pages.dev/icon.png" width="120" alt="Nyora" />
+<img src="https://nyora.xyz/icon.png" width="120" alt="Nyora" />
 
 # Nyora — the manga reader SDK for JavaScript & TypeScript
 
 ### Build your own manga, manhwa & manhua reader in ~10 lines.
 
-**`nyora-sdk`** is the official Node.js / TypeScript SDK for [Nyora](https://nyora.pages.dev) —
+**`nyora-sdk`** is the official Node.js / TypeScript SDK for [Nyora](https://nyora.xyz) —
 a thin cloud client that gives you **363 live, health-checked sources across 40 languages**
 through one typed API: search, browse, read chapters, download pages, and sync a library
 across devices. No scraper to maintain, no JVM, no jsdom, no parser bundle — `npm install
@@ -274,9 +274,9 @@ comics across 40 languages.
 ## Ecosystem
 
 - **Python SDK** — [`nyora`](https://pypi.org/project/nyora/) (`pip install nyora`)
-- **Apps** — Android, iOS/iPadOS, macOS, Windows, Linux and a web app: <https://nyora.pages.dev>
-- **Docs** — <https://nyora.pages.dev/docs/js/>
-- **Source** — <https://github.com/Hasan72341/nyora-js>
+- **Apps** — Android, iOS/iPadOS, macOS, Windows, Linux and a web app: <https://web.nyora.xyz>
+- **Docs** — <https://nyora.xyz/docs/js/>
+- **Source** — <https://github.com/Nyora-Manga/nyora-js>
 
 ## License
 
